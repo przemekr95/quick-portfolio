@@ -1,0 +1,28 @@
+@import '~@przemekr95/quick-design-tokens/dist/scss/index.scss';
+
+.button {
+  padding: $spacing-2 $spacing-6;
+  border: none;
+  border-radius: 10px;
+  background: $color-primary;
+  color: black;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-sm-font-size;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: $color-secondary;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus {
+    outline: 2px solid black;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
