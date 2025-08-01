@@ -1,30 +1,35 @@
 @import '~@przemekr95/quick-design-tokens/dist/scss/index.scss';
-@import '~@przemekr95/quick-design-tokens/dist/scss/global/classes.scss';
 
 .photography_side {
   flex: 1;
   height: 100%;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
   position: relative;
   overflow: hidden;
   transition: transform 0.2s ease;
+  background-position: right top !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
-.bottom_text {
-  margin-bottom: $spacing-12;
-  text-align: center;
+.heading_text {
+  margin-bottom: $spacing-4;
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  font-size: $font-size-2xl-font-size;
+  line-height: $font-size-2xl-line-height;
+  font-weight: $font-weight-light;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%);
+  z-index: 2;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  z-index: 2;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.9) 100%);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s;
@@ -36,16 +41,19 @@
 }
 
 .overlay_content {
-  color: #fff;
-  text-align: center;
-  width: 100%;
-  padding-bottom: $spacing-32;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding-bottom: $spacing-32;
+  color: #fff;
+  text-align: center;
 }
 
 .overlay_description {
-  margin-bottom: $spacing-4;
-  font-size: $font-size-lg-font-size;
+  margin-bottom: $spacing-8;
+  font-size: $font-size-md-font-size;
+  line-height: $font-size-md-line-height;
+  font-weight: $font-weight-light;
+  letter-spacing: 0.1em;
 }

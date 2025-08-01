@@ -6,6 +6,9 @@ const DesktopView = () => (
   <div className={styles.desktop_view}>
     <PhotographySide />
     <DevelopmentSide />
+    <div className={styles.reveal_hint}>
+      Hover to explore
+    </div>
   </div>
 );
 

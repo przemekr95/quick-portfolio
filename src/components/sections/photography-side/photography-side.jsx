@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react'
 import Button from '../../common/button/button'
 import styles from './photography-side.module.scss'
-import leftBg from '../../../assets/images/left-bg_02.78fb04fb.jpg'
+import leftBg from '../../../assets/images/left-bg.jpg'
 
 const PhotographySide = () => {
   const [isHovered, setIsHovered] = useState(false)
@@ -17,7 +17,7 @@ const PhotographySide = () => {
       onMouseLeave={handleMouseLeave}
       aria-labelledby='photography-heading'
     >
-      <h2 id='photography-heading' className={styles.bottom_text}>
+      <h2 id='photography-heading' className={styles.heading_text}>
         PHOTOGRAPHY
       </h2>
       <div 
@@ -26,13 +26,13 @@ const PhotographySide = () => {
       >
         <div className={styles.overlay_content}>
           <p className={styles.overlay_description}>
-            Więcej o fotografii
+            CAPTURING MOMENTS
           </p>
           <Button
-            href='/photography'
-            ariaLabel='Zobacz więcej zdjęć'
+            href='http://www.foto.przemekrura.pl/'
+            ariaLabel='View Portfolio'
           >
-            Zobacz więcej
+            View Portfolio
           </Button>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react'
 import Button from '../../common/button/button'
 import styles from './development-side.module.scss'
-import rightBg from '../../../assets/images/right-bg_02.6ad4edee.jpg'
+import rightBg from '../../../assets/images/right-bg.jpg'
 
 const DevelopmentSide = () => {
   const [isHovered, setIsHovered] = useState(false)
@@ -17,7 +17,7 @@ const DevelopmentSide = () => {
       onMouseLeave={handleMouseLeave}
       aria-labelledby='development-heading'
     >
-      <h2 id='development-heading' className={styles.bottom_text}>
+      <h2 id='development-heading' className={styles.heading_text}>
         DEVELOPMENT
       </h2>
       <div 
@@ -26,13 +26,13 @@ const DevelopmentSide = () => {
       >
         <div className={styles.overlay_content}>
           <p className={styles.overlay_description}>
-            Więcej o developmentcie
+            BUILDING EXPERIENCES
           </p>
           <Button
-            href='/development'
-            ariaLabel='Zobacz więcej projektów'
+            href='http://www.dev.przemekrura.pl/'
+            ariaLabel='View Projects'
           >
-            Zobacz więcej
+            View Projects
           </Button>
         </div>
       </div>
