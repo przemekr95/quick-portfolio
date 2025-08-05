@@ -1,5 +1,122 @@
+@import '~@przemekr95/quick-design-tokens/dist/scss/index.scss';
+
 .mobile_view {
-    background-color: gold;
-    width: 100vw;
-    height: 100vh;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.slider {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.slide {
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  position: relative;
+  text-align: center;
+}
+
+.slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.slidePhotography {
+  background: linear-gradient(135deg, #2563eb 0%, #a259ff 100%);
+  color: #fff;
+}
+
+.slideDevelopment {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #fff;
+}
+
+.slideTitle {
+  margin-bottom: $spacing-8;
+  font-size: $font-size-2xl-font-size;
+  line-height: $font-size-2xl-line-height;
+  font-weight: $font-weight-light;
+  letter-spacing: 0.1em;
+}
+
+.slideHint {
+  position: absolute;
+  left: 50%;
+  bottom: $spacing-16;
+  transform: translateX(-50%);
+  color: #fff;
+  opacity: 0.85;
+  font-size: $font-size-sm-font-size;
+  line-height: $font-size-sm-line-height;
+  font-weight: $font-weight-light;
+  letter-spacing: 0.1em;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.sliderDots {
+  position: absolute;
+  left: 50%;
+  bottom: $spacing-6;
+  transform: translateX(-50%);
+  display: flex;
+  gap: $spacing-3;
+  z-index: 10;
+}
+
+.sliderDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(1.1);
+  }
+  
+  &:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+}
+
+.sliderDotActive {
+  background: #fff;
+}
+
+.slideOverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: $spacing-32;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.9) 100%);
+  color: #fff;
+  text-align: center;
 }
